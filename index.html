@@ -70,15 +70,17 @@
             padding: 20px;
             width: 100%;
             text-align: center;
-            background-color: #F6F8FA;
+            background-color: #f4f4f9;
             border-top: 2px solid #333;
             color: #333;
-            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
         }
         .footer-link {
             color: #333;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
             position: relative;
             overflow: hidden;
@@ -124,14 +126,14 @@
             height: 100%;
             top: 0;
             left: -100%;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease-in-out;
         }
         .email-button:hover::before {
             left: 0;
         }
         .email-button:hover {
-            background-color: #32a800;
+            background-color: #3ec606;
             transform: scale(1.05);
         }
         @media (max-width: 768px) {
@@ -147,12 +149,16 @@
             .project, .placeholder {
                 width: 80%;
             }
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Alicja Klimurczyk</h1>
-    <div class="container">
+ <div class="container">
         <a href="https://aklm17.github.io/documentation/" class="project" target="_blank">Knowledge Base Article</a>
         <a href="https://aklm17.github.io/documentation/" class="project" target="_blank">Technical Documentation</a>
         <a href="https://aklm17.github.io/ux/" class="project" target="_blank">Internal Documentation</a>
