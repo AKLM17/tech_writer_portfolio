@@ -70,7 +70,7 @@
             padding: 20px;
             width: 100%;
             text-align: center;
-            background-color: #f4f4f9;
+            background-color: #F6F8FA;
             border-top: 2px solid #333;
             color: #333;
             margin-top: auto;
@@ -80,6 +80,25 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s;
+        }
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+        .footer-link:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
         }
         .email-button {
             background-color: #3ec606;
@@ -94,6 +113,26 @@
             cursor: pointer;
             border-radius: 5px;
             font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .email-button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .email-button:hover::before {
+            left: 0;
+        }
+        .email-button:hover {
+            background-color: #32a800;
+            transform: scale(1.05);
         }
         @media (max-width: 768px) {
             h1 {
