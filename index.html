@@ -31,12 +31,14 @@
         }
         h1 {
              color: #333;
-            margin-top: 10px; /* Adjusted margin-top to position higher */
-            margin-bottom: 30px; /* Adjusted margin-bottom for better spacing */
+            margin-top: 10px;
+            margin-bottom: 30px; 
             font-size: 2.5em;
             font-weight: bold;
             letter-spacing: 1px;
             text-align: center;
+            position: relative;
+            display: inline-block;
         }
         .container {
             display: grid;
@@ -55,14 +57,24 @@
             text-align: center;
             border-radius: 10px;
             border: 2px dotted #333;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.18);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            will-change: transform;
             text-decoration: none;
         }
-        .project:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        .project:focus-visible {
+            outline: none;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
             border-color: #3ec606;
-            cursor: pointer;
+            
+        @media (hover: hover) {
+            .project:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+                border-color: #3ec606;
+                cursor: pointer;
+            }
         }
         .placeholder {
             background-color: #ccc;
@@ -88,7 +100,7 @@
             gap: 20px;
             position: relative;
         }
-        .footer-link {
+        .cool-link {
             color: #333;
             text-decoration: none;
             font-weight: bold;
@@ -96,7 +108,7 @@
             overflow: hidden;
             transition: color 0.3s;
         }
-        .footer-link::before {
+        .cool-link::before {
             content: '';
             position: absolute;
             width: 100%;
@@ -108,7 +120,7 @@
             transform: scaleX(0);
             transition: all 0.3s ease-in-out;
         }
-        .footer-link:hover::before {
+        .cool-link:hover::before {
             visibility: visible;
             transform: scaleX(1);
         }
@@ -153,11 +165,16 @@
                 margin-bottom: 20px;
             }
             .container {
-                grid-template-columns: 1fr;
-                padding: 10px;
+                 grid-template-columns: 1fr;
+                width: 100%;
+                gap: 12px;
+                padding: 12px;
             }
             .project, .placeholder {
-                width: 80%;
+                width: 100%;
+                max-width: 420px;
+                padding: 18px;
+            }
             }
             footer {
                 flex-direction: column;
@@ -168,7 +185,7 @@
 </head>
 <body>
     <div class="main-content">
-        <h1>Alicja Klimurczyk</h1>
+        <h1 class="cool-link">Alicja Klimurczyk</h1>
         <div class="container">
             <a href="https://docs.zoovu.com/" class="project" target="_blank">Zoovu Knowledge Base</a>
             <a href="https://drive.google.com/file/d/1Nink5BwQU_Gzn5QUXHqICJa9LTnJls2G/view?usp=sharing" class="project" target="_blank">UX copy</a>
@@ -182,7 +199,7 @@
         </div>
     </div>
     <footer>
-        <a href="https://drive.google.com/file/d/1C4IH5mwO9m29ibE-9I52wDaCIStLxBj7/view?usp=sharing" class="footer-link" target="_blank">My CV</a>
+        <a href="https://drive.google.com/file/d/1C4IH5mwO9m29ibE-9I52wDaCIStLxBj7/view?usp=sharing" class="cool-link" target="_blank">My CV</a>
         <a href="mailto:a.klimurczyk@gmail.com" class="email-button">Email me</a>
     </footer>
 </body>
