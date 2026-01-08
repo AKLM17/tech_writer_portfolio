@@ -56,7 +56,6 @@
             padding: 20px;
             text-align: center;
             border-radius: 10px;
-            border: 2px dotted #333;
             border: 1px solid rgba(0, 0, 0, 0.18);
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
             will-change: transform;
@@ -67,7 +66,7 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
             border-color: #3ec606;
-            
+        }
         @media (hover: hover) {
             .project:hover {
                 transform: translateY(-2px);
@@ -175,7 +174,6 @@
                 max-width: 420px;
                 padding: 18px;
             }
-            }
             footer {
                 flex-direction: column;
                 gap: 10px;
@@ -185,7 +183,15 @@
 </head>
 <body>
     <div class="main-content">
-        <h1 class="cool-link">Alicja Klimurczyk</h1>
+        <h1>
+            <a href="https://www.linkedin.com/in/klimurczyk/"
+                class="cool-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                Alicja Klimurczyk
+            </a>
+        </h1>
         <div class="container">
             <a href="https://docs.zoovu.com/" class="project" target="_blank">Zoovu Knowledge Base</a>
             <a href="https://drive.google.com/file/d/1Nink5BwQU_Gzn5QUXHqICJa9LTnJls2G/view?usp=sharing" class="project" target="_blank">UX copy</a>
